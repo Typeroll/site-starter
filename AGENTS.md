@@ -58,7 +58,8 @@ or launch acceptance. Compare text and design/images separately: preserved dimen
 renewed dimensions to their approved brief. New design never permits rewriting preserved text. Start with workflows/migration.md for the kickoff
 prompt. The agent rebuilds imported HTML using ordinary block tools; the owner
 does not need to manually convert each Page. No automatic converter is available.
-Discover tools and recipes on demand.
+Discover tools and recipes on demand. Read scripts/README.md for version-bound
+pre-deploy and hosted QA tools. Follow workflows/design.md for layout defaults.
 
 ## Project rules and search strategy
 

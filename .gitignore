@@ -9,3 +9,5 @@
 .vscode/mcp.json
 qa/reports/
 sources/private/
+**/__pycache__/
+scripts/typeroll/node_modules/
