@@ -13,7 +13,7 @@ const hash = value => createHash('sha256').update(value).digest('hex');
 
 export function assertOriginal(repository, remote) {
   if (repository && repository !== REPOSITORY) throw Error('Template synchronization cannot run in a customer repository');
-  if (!['git@github.com:Typeroll/site-starter.git', 'https://github.com/Typeroll/site-starter.git'].includes(remote)) throw Error('Origin must be exactly Typeroll/site-starter');
+  if (!['git@github.com:Typeroll/site-starter.git', 'https://github.com/Typeroll/site-starter.git', 'https://github.com/Typeroll/site-starter'].includes(remote)) throw Error('Origin must be exactly Typeroll/site-starter');
 }
 
 export function assertVersion(version, current) {
