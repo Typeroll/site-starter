@@ -7,6 +7,7 @@ import { assertOriginal, assertVersion, validateGenerated } from './sync.mjs';
 
 test('refuses customer repositories even when origin points at the upstream', () => {
   assertOriginal('Typeroll/site-starter', 'https://github.com/Typeroll/site-starter.git');
+  assertOriginal('Typeroll/site-starter', 'https://github.com/Typeroll/site-starter');
   assert.throws(() => assertOriginal('customer/site', 'https://github.com/Typeroll/site-starter.git'));
   assert.throws(() => assertOriginal(undefined, 'git@github.com:customer/site.git'));
   assert.throws(() => assertOriginal('Typeroll/site-starter', 'https://github.com/Typeroll/site-starter.git.evil'));
