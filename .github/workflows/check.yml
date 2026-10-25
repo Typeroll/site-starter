@@ -1,0 +1,24 @@
+name: Check starter template
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  check:
+    if: github.repository == 'Typeroll/site-starter'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22.23.1'
+      - run: node --test .github/template/sync.test.mjs
+      - name: Compare with the pinned published generator
+        run: |
+          VERSION=$(node -p "JSON.parse(require('fs').readFileSync('.github/starter-source.json','utf8')).version")
+          node .github/template/sync.mjs --version "$VERSION" --check

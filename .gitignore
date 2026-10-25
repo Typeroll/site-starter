@@ -1,0 +1,11 @@
+
+# Typeroll workspace private files
+.typeroll/
+.env
+.env.*
+!.env.example
+.mcp.json
+.cursor/mcp.json
+.vscode/mcp.json
+qa/reports/
+sources/private/

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "generator_version": "0.45.77",
+  "files": {
+    "brief/interview.md": "ef191d050764a33b8d18fe53e654dac48fa0d4000fb461e9df2508727f4df438",
+    "brief/migration.md": "18e28e983a8d7f2d18ffdcb437ef2c49edadded22e4b8901fb43c7269e53a365",
+    "workflows/interview.md": "7e39634fc1dcf572cea5e0de7596c163f3ab198755dcb8cc3d3af58b7ffbd1dc",
+    "workflows/migration.md": "9149921043e26a08fab5a99e9c3151ac5b5412e7d0229e4fbc988950fdb9a16f",
+    "workflows/new-site.md": "72805ed1295c55cba817d76233e307f422c87d97cb91e17dc28f081992abb418",
+    "AGENTS.md": "51d0ddaa8be4d299da082189e7d2195f3d9c095e635d96380b2c0af7b3b5b928",
+    "README.md": "c9fd0fb9f194efd7782aed77c10964240da72ce4ad37794cffb45fc02c631511",
+    "brief/site.md": "72293337bc115697e5488157ceb15dea50465e04603b7da1610c86c7d4c39798",
+    "brief/brand.md": "d6d92a535a6c426a7a5db5478b1cfc96099718551f7066329888ba94f51497cd",
+    "brief/content-model.md": "f4a8f8d805656b07f2a3c1f1ec7bf1708855fe16d8d73dd45eca3747a0b9f7e0",
+    "brief/rules.md": "a25fac0a63e82dc4674d0b43f12b774ac0d91858d6fc4bd9ed425d657e480b84",
+    "brief/seo.md": "6044e608ebb092e5c03bc98b6df4a4ced5f1e15bf90a08624f878215aec6854c",
+    "workflows/README.md": "5d59094c6fce6dff461f7cd07b6fe2b6bb3279d9ff0fabf858bd339761ebc32e",
+    "decisions.md": "8bfa168ae4b0f4863364cfe5095ac6946be8cb84682b9b66aaed330e0df54264",
+    "sources/README.md": "2bdee181e4e2e40c62cd98d32b5b1d6f844f9bfd23c460edd2da129531135551",
+    "scripts/README.md": "cf7454a4e33333073ca0e8e3fca1bd4cd74bf9e87d51ed17be967111601d501a",
+    "qa/checklist.md": "d3f2428ea670d195d2b446c7b4a3f17b3ec8837a91067112a3ed95e9f87127b3"
+  }
+}
