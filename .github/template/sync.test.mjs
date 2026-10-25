@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
@@ -27,6 +28,13 @@ test('committed workspace matches its source hashes; modified or unsafe files fa
   assert(files['README.md'].startsWith(intro+'\n'));
   files['README.md']=files['README.md'].slice(intro.length+1);
   validateGenerated(files,lock.generator_version);
+  const toolName = 'scripts/typeroll/check_unsaved.py';
+  const tool = '# read-only synthetic helper\n';
+  const extendedLock = {...lock, files:{...lock.files,[toolName]:createHash('sha256').update(tool).digest('hex')}};
+  validateGenerated({...files,[toolName]:tool,'typeroll.lock.json':JSON.stringify(extendedLock)},lock.generator_version);
+  for (const name of ['scripts/typeroll/../../secret.py','scripts/typeroll/.env','scripts/typeroll/install.sh','scripts/typeroll/node_modules/bad.cjs']) {
+    assert.throws(()=>validateGenerated({...files,[name]:'bad'},lock.generator_version));
+  }
   assert.throws(()=>validateGenerated({...files,'AGENTS.md':'changed'},lock.generator_version));
   assert.throws(()=>validateGenerated({...files,'../secret':'bad'},lock.generator_version));
   assert.throws(()=>validateGenerated({...files,'.github/workflows/injected.yml':'bad'},lock.generator_version));

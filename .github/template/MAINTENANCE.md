@@ -33,3 +33,11 @@ Do not duplicate kickoff prompts in this introduction or the public docs.
 Workflow guards disable both synchronization and template checks in copies.
 Owners can remove `.github/` from their projects without affecting MCP or CLI use.
 The template license covers the starter, not any content customers add to it.
+
+
+The next MCP starter includes reviewed optional QA source files beneath
+`scripts/typeroll/` (`.py` and `.cjs` only). These are generated from Core's
+workspace-templates with the same hash checks as Markdown. They are never run
+by synchronization. No shell installers, credentials, node_modules or arbitrary
+nested paths are accepted. Merge this validator support before synchronizing
+that MCP release; do not copy unreleased scripts into a released-version lock.
