@@ -31,6 +31,8 @@ Public documentation: https://typeroll.com/docs/llms.txt
 
 - Read current Pages, Content types, templates, partials and relevant block schemas.
 - Use native editable blocks; document necessary exceptions and design decisions.
+- Configure palette/font roles and design scales in site settings. Read workflows/design.md
+  before styling blocks; run lint_design_tokens and document hardcoded exceptions.
 - Discover get_composition_starter for qualified native starting layouts. Read one
   recipe at a time; map it to the actual schema. Never overwrite an existing
   template with a starter. Sections own gutters; avoid extra nested padding.

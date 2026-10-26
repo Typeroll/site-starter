@@ -8,4 +8,4 @@
 
 ## Desktop and mobile navigation
 
-Record intent here; current design tokens belong in CMS settings.
+Record intent here; current design tokens belong in CMS settings. Choose semantic palette roles and typography/spacing steps; record deliberate hardcoded exceptions in decisions.md.
