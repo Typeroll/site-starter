@@ -8,7 +8,8 @@ Project files record intent; the CMS owns current content and configuration.
 | Guided start | workflows/interview.md, brief/interview.md | Ask one question at a time; resume confirmed answers |
 | New website | workflows/new-site.md, brief/site.md, brief/brand.md, brief/content-model.md | tr-new-site, tr-starter-design |
 | Migration | workflows/migration.md, brief/migration.md | tr-migration-evidence, then tr-migrate-wp or the matching source recipe |
-| Everyday editing | brief/rules.md and the relevant Page | tr-edit-site |
+| Everyday editing | brief/rules.md, pages/ notes and the relevant Page | tr-edit-site |
+| Page notes and review | workflows/page-notes.md, pages/README.md, pages/index.md | Read before edits; update logs afterward |
 | SEO | brief/seo.md and current site settings | tr-seo |
 | New reusable block | brief/brand.md and recorded editing needs | tr-custom-blocks |
 | Verification and publication | qa/checklist.md, decisions.md | Current preview/deploy tools and publishing readiness |
