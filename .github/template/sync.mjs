@@ -28,7 +28,7 @@ export function assertVersion(version, current) {
 }
 
 export function validateGenerated(files, version) {
-  const allowed = /^(AGENTS\.md|README\.md|decisions\.md|typeroll\.(json|lock\.json)|\.gitignore|(brief|workflows|sources|scripts|qa)\/([a-z0-9-]+|README)\.md|scripts\/typeroll\/[a-z0-9_-]+(?:\.example)?\.(?:py|cjs))$/;
+  const allowed = /^(AGENTS\.md|README\.md|decisions\.md|typeroll\.(json|lock\.json)|pages\/README\.md|\.gitignore|(brief|workflows|sources|scripts|qa)\/([a-z0-9-]+|README)\.md|scripts\/typeroll\/[a-z0-9_-]+(?:\.example)?\.(?:py|cjs))$/;
   for (const name of Object.keys(files)) if (!allowed.test(name)) throw Error(`Unexpected generated path: ${name}`);
   const lock = JSON.parse(files['typeroll.lock.json']);
   if (lock.schema_version !== 1 || lock.generator_version !== version) throw Error('Generator version/lock mismatch');

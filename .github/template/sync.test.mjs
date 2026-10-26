@@ -32,7 +32,7 @@ test('committed workspace matches its source hashes; modified or unsafe files fa
   const tool = '# read-only synthetic helper\n';
   const extendedLock = {...lock, files:{...lock.files,[toolName]:createHash('sha256').update(tool).digest('hex')}};
   validateGenerated({...files,[toolName]:tool,'typeroll.lock.json':JSON.stringify(extendedLock)},lock.generator_version);
-  for (const name of ['scripts/typeroll/../../secret.py','scripts/typeroll/.env','scripts/typeroll/install.sh','scripts/typeroll/node_modules/bad.cjs']) {
+  for (const name of ['scripts/typeroll/../../secret.py','scripts/typeroll/.env','scripts/typeroll/install.sh','scripts/typeroll/node_modules/bad.cjs','pages/customer-notes.md','pages/archived/private.md']) {
     assert.throws(()=>validateGenerated({...files,[name]:'bad'},lock.generator_version));
   }
   assert.throws(()=>validateGenerated({...files,'AGENTS.md':'changed'},lock.generator_version));
