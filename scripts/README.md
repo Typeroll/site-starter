@@ -13,7 +13,8 @@ npx playwright install chromium
 Run the commands below from the **workspace root**. Inject TYPEROLL_API_KEY through
 your private credential manager. Never put it in a file or command argument.
 trlib.py reads portal, organization_id, site_id and version from typeroll.json,
-checks the connected Site/Organization, discovers the live tool schema, and
+sends the key only to https://app.typeroll.com or to a portal you confirm by
+setting TYPEROLL_API_URL to the same origin privately, checks the connected Site/Organization, discovers the live tool schema, and
 passes the Version where supported. It refuses unversioned operations on a
 non-main binding; use the explicit interactive API workflow for organization or
 shared media operations instead. It is a small hosted MCP helper for API keys,
@@ -116,3 +117,12 @@ See workflows/source-media.md for archive verification and original preservation
 Omit --dry-run to write local files; --migration-inventory adds recorded redirect
 sources. It never writes to the CMS, marks a Page reviewed or deletes notes. Read
 pages/README.md and workflows/page-notes.md before first use.
+
+### Heading rhythm after a rebuild
+
+`node scripts/typeroll/check_heading_spacing.cjs https://example.com [paths.json]`
+checks opening component headings and card spacing at 375, 768 and 1280px.
+`paths.json` is an array of same-origin page paths; otherwise it reads a flat
+sitemap. Requires Playwright and its Chromium browser. Findings need visual
+review: deliberate asymmetric cards belong in decisions.md. It is a read-only
+QA helper, not a publication gate or a CSS repair tool.
