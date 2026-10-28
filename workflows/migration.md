@@ -103,18 +103,21 @@ normal approval flow. A separately authorized provider-side setup with a supplie
 beacon token is an alternative, not a way to bypass Organization permissions.
 Never expose a provider API token as a public beacon token.
 
-From Core 0.2.106, saving future hosts does not redirect normal publication.
-Keep using `trigger_deploy` to update and review the current/temporary address.
-Read `next_publication` in `read_publishing_domains` for the destination.
-Shortly before DNS changes, deliberately call `prepare_publishing_domain_change`
-with the current revision. It prepares the last successful public snapshot,
-not later unpublished CMS edits. Review its frozen indexing settings and DNS
-requirements, then approve traffic separately. If another normal publication
-succeeds while the candidate waits, prepare again: an outdated snapshot cannot
-replace newer published content. There is no need to clear saved future hosts.
-To correct candidate indexing, save the intended setting, publish normally, and
-prepare again. Temporary-host protection keeps the review address noindex even
-when the published authored setting permits indexing on the future host.
+From Core 0.2.116 / MCP 0.45.87, saving future hosts remains inert.
+Publish and review intended changes at the current/temporary address first.
+Shortly before DNS changes, explicitly call `prepare_publishing_domain_change`
+with the current revision: it republishes the last successful public snapshot
+on main with the new origins, replacing the site at its current address.
+Later unpublished CMS changes are excluded. New-host absolute links and media
+may not work until DNS/certificates are ready. Do not promise a parallel old copy.
+Review frozen indexing and DNS requirements, then approve DNS separately; that
+step does not push, build or upload again. Normal publications before DNS retain
+the newly embedded origins and refresh the current receipt. Read the latest
+candidate_id before approval; no new preparation is needed for a content edit.
+To correct indexing, save the intended setting and publish normally.
+`published.hosts` describes main output; `active` describes verified traffic.
+DNS rollback restores DNS, not an older artifact. For older servers that still
+prepare a preview branch, update Core before using this workflow.
 Keep MX/SPF and unrelated DNS unchanged; review any validation window and obtain
 the already-defined traffic-switch authorization.
 
@@ -157,3 +160,20 @@ Compare 375, 768 and 1280px in Site settings → Design and in a full site previ
 After a rendering upgrade/rebuild, recheck cards, boxed headings, leading text
 and webfonts. Boxes should get their outer air from padding. Keep exceptions
 in decisions.md, and run lint_design_tokens before launch.
+
+### Sharing metadata
+
+Compare saved full source and deployed target HTML with
+`python3 scripts/typeroll/compare_seo.py qa/source.html qa/target.html`.
+The report includes document metadata, `og:image`, `og:title`,
+`og:description` and Twitter tags, including missing and duplicate tags.
+Record intentional differences; an image URL changed by migration needs review
+against the media mapping, not automatic approval. This script does not fetch
+pages or change content. Keep source snapshots free of private data.
+
+From Core 0.2.120 / MCP 0.45.90, preserve distinct sharing text in Page
+`og_title` and `og_description`. Empty fields use SEO metadata. The public
+content-type field mapped to Schema.org `image` supplies the image after
+`og_image`, before site defaults. Its `<field>_alt` supplies the image description
+when public; `seo_image_alt` is the explicit override. Never copy a site logo
+into every Page merely to reproduce an old fallback.
