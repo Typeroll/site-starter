@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generator_version": "0.45.93",
+  "generator_version": "0.45.95",
   "files": {
     "brief/interview.md": "ef191d050764a33b8d18fe53e654dac48fa0d4000fb461e9df2508727f4df438",
     "brief/migration.md": "18e28e983a8d7f2d18ffdcb437ef2c49edadded22e4b8901fb43c7269e53a365",
