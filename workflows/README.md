@@ -13,5 +13,6 @@ Project files record intent; the CMS owns current content and configuration.
 | SEO | brief/seo.md and current site settings | tr-seo |
 | New reusable block | brief/brand.md and recorded editing needs | tr-custom-blocks |
 | Verification and publication | qa/checklist.md, decisions.md | Current preview/deploy tools and publishing readiness |
+| Launch | qa/checklist.md (Launch), brief/seo.md (Launch basics) | read_site_readiness, tr-seo |
 
 Add project-specific routines here with inputs, steps, acceptance evidence and approval boundaries. Do not copy the complete Typeroll manual or private app guides. Discover enabled app guidance with read_app_documentation. Load a recipe when needed so instructions stay current and context stays small.
