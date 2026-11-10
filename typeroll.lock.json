@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generator_version": "0.45.127",
+  "generator_version": "0.45.131",
   "files": {
     "brief/interview.md": "ef191d050764a33b8d18fe53e654dac48fa0d4000fb461e9df2508727f4df438",
     "brief/migration.md": "18e28e983a8d7f2d18ffdcb437ef2c49edadded22e4b8901fb43c7269e53a365",
@@ -27,9 +27,9 @@
     "scripts/typeroll/shootframe.cjs": "0c28c86e6fb8984d601dc47448b4daa5ecc98208f6d01c20f756bdb822e17745",
     "scripts/typeroll/sweep_blocks.example.py": "07dea20fdfe431014f26eefda494eccfec39eb071c0fd3af1b73bc13f6ca4618",
     "scripts/typeroll/trlib.py": "b3e3baf78acf5ee8a437d3597032c8729a7a54d3d39749432ac5984c319e47d8",
-    "workflows/design.md": "33cb7e0ab3eddbd1e50cb4fcd3eb9b78b0de6473b71a83e0e1f5ad05b2a2dc53",
+    "workflows/design.md": "cb57786ec97d529658dd3a1f09f8b94525b42b13275ed0d2db6349adf99becf5",
     "workflows/interview.md": "95977750b1dae6acee15a2622c2cf898a24d4691d4d8899772a859f143feff62",
-    "workflows/migration.md": "306d261e20ea8aa6091ff6f13a39773eb06d9c4860bf5932cf7900f4fc77093c",
+    "workflows/migration.md": "6f6b1f4a573ad8dfd59e653f6f78fe1149848aa3a03f999debf44ca187db90ae",
     "workflows/new-site.md": "da7c11e0ff33a43ad3518cda11b2397f46a12546a8840debc6815c1af7eb2aec",
     "workflows/page-notes.md": "7076d0f1d27a5657482688c8640614dba048616508a9e7213d48f0b7b6d4b9fb",
     "workflows/source-media.md": "8af69339e8aa6f2e2621fbd712209bc1d5c88600e3d0f42a36222ea300521905",
