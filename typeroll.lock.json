@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generator_version": "0.45.140",
+  "generator_version": "0.45.147",
   "files": {
     "brief/interview.md": "ef191d050764a33b8d18fe53e654dac48fa0d4000fb461e9df2508727f4df438",
     "brief/migration.md": "18e28e983a8d7f2d18ffdcb437ef2c49edadded22e4b8901fb43c7269e53a365",
     "pages/README.md": "778fe6dd30b40f8d9fe1b0492754d0ac19ea30f96789ec30b4770ed9c1a24dde",
-    "qa/checklist.md": "7b9a7db0aa77ec1b6c1aa89936670e0be15935c58de6165b8d2058b923841479",
+    "qa/checklist.md": "6ddb101881789209c5988e1a43d4e87929d73fddc55b2833b75a9774a3a2eecb",
     "qa/typeroll-platform-feedback.md": "59cde3b3c1935ed87781617c481e520cdbfda6f2b7340e11e40e57d17a6b43da",
     "scripts/README.md": "791010345c3a41f0b84b091e80ddfcd39061189db9dff755c6ea3ef25c7f0d81",
     "scripts/typeroll/browser.cjs": "670a6c74f7f14768f2b0eaf9a06f9ad38317e72acbfc6eea305c885a5836db68",

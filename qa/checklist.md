@@ -24,6 +24,9 @@
   Use card-stacking-check.cjs for whole-card excerpt/media/whitespace targets.
 - Check actual contrast on light/dark/photo backgrounds, image subjects and
   sharpness, footer balance, left-aligned last rows and heading hierarchy.
+- Check the gap before the footer on text, article and form pages at mobile and
+  desktop widths. Prefer shared `footer_spacing` (Core 0.3.40+) and review
+  `footer_spacing_zero` save warnings; record intentional edge-to-edge endings.
 - Check home title/suffix, metadata, canonical/indexing policy and JSON-LD.
 - Run check_url_parity.py and check_assets.py on the deployed candidate; compare
   final targets with the approved URL map and flatten accidental redirect chains.
@@ -123,3 +126,12 @@ content-type field mapped to Schema.org `image` supplies the image after
 `og_image`, before site defaults. Its `<field>_alt` supplies the image description
 when public; `seo_image_alt` is the explicit override. Never copy a site logo
 into every Page merely to reproduce an old fallback.
+
+
+### Bulk content and image edits
+
+- Send only changed fields. Use `batch_update_pages` for Page-specific edits,
+  inspect each result and retry only failed entries. Review earlier drafts before save.
+- For a library-wide `replace_media`, review the dry run and all-version scope;
+  inspect preview image proportions, crops and editorial alt text before publishing.
+  The replacement leaves saved Page bodies and the current live publication intact.
