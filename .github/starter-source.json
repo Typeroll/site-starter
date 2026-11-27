@@ -1,6 +1,6 @@
 {
   "package": "@typeroll/mcp-server",
-  "version": "0.45.151",
-  "source_commit": "72789d9b45ef23a599d1b75cae14a4d823252bba",
-  "integrity": "sha512-TFuukcZKRHMozoF1L9Mwj3ZcKFDb7PuDexf1U6+UktWma1677yLetaL/yPBdoZUQQzQE9c4njX54OC77VJAbmQ=="
+  "version": "0.45.152",
+  "source_commit": "f5edac9d7f4be57912a850ac8b6ed99f7f86b4b5",
+  "integrity": "sha512-+Jrax6FSAWr6KLa1DyGJrs3kSLPEXkWp7deBzRV9S6B9JbR/aXdHUolVo41PpL1jgy2VuGwdlVHYnP9/yb3HBg=="
 }
